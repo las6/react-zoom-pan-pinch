@@ -24,7 +24,8 @@ export function handlePanningStart(
   handleCancelAnimation(contextInstance);
   handleCalculateBounds(contextInstance, scale);
   if (window.TouchEvent !== undefined && event instanceof TouchEvent) {
-    handleTouchPanningSetup(contextInstance, event as TouchEvent);
+    //disable single-touch panning for now
+    // handleTouchPanningSetup(contextInstance, event as TouchEvent);
   } else {
     handlePanningSetup(contextInstance, event as MouseEvent);
   }
