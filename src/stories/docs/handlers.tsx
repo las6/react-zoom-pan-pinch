@@ -64,10 +64,11 @@ export const handlersTable: ComponentProps = {
     description: "Function used for centering the content component",
   },
   zoomToElement: {
-    type: ["function(node, customZoom, animationTime, animationName)"],
+    type: ["function(node, customZoom, offset, animationTime, animationName)"],
     parameters: [
       "node: HTMLElement | string",
       "customScale: number = undefined",
+      "offset: { x: number; y: number } = undefined",
       "animationTime: number = 300",
       "animationName: string = easeOut",
     ],
