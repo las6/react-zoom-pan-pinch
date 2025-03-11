@@ -98,6 +98,7 @@ export const zoomToElement =
   (
     node: HTMLElement | string,
     scale?: number,
+    offset?: { x: number; y: number },
     animationTime = 600,
     animationType: keyof typeof animations = "easeOut",
   ): void => {
@@ -110,6 +111,12 @@ export const zoomToElement =
 
     if (wrapperComponent && target && wrapperComponent.contains(target)) {
       const targetState = calculateZoomToNode(contextInstance, target, scale);
+
+      if (offset) {
+        targetState.positionX += offset.x;
+        targetState.positionY += offset.y;
+      }
+      
       animate(contextInstance, targetState, animationTime, animationType);
     }
   };

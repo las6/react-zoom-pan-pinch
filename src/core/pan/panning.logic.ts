@@ -8,7 +8,7 @@ import {
   handleNewPosition,
   handlePanningSetup,
   handlePanToBounds,
-  handleTouchPanningSetup,
+  // handleTouchPanningSetup,
 } from "./panning.utils";
 import {
   handleVelocityPanning,
